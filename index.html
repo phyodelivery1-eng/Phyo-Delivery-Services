@@ -51,6 +51,10 @@
         }
     </style>
 
+
+<!-- pt-[70px] ပေးထား၍ Fixed Navbar အောက်သို့ စာများ ငုပ်မဝင်တော့ပါ -->
+
+
     <!-- Fixed Navbar -->
     <nav class="fixed top-0 left-0 right-0 w-full bg-amber-500 text-gray-900 px-4 py-2 shadow-md z-50">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
@@ -80,8 +84,8 @@
     <!-- Main Content Container (လိပ်စာ၊ မီနူးများ) -->
     <div class="max-w-2xl mx-auto p-3 space-y-3">
 
-        <!-- Contact Support Card (လိပ်စာနှင့် ခလုတ်များ) -->
-        <div class="bg-white p-3.5 rounded-2xl shadow-sm border border-amber-200 space-y-3">
+        <!-- Contact Support Card (လိပ်စာ) -->
+        <div class="bg-white p-3.5 rounded-2xl shadow-sm border border-amber-200">
             <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                 <h3 class="text-base sm:text-lg font-bold text-gray-800 whitespace-nowrap">
                     ရုံးသို့ တိုက်ရိုက် ဆက်သွယ်ရန်
@@ -91,8 +95,7 @@
                 </p>
             </div>
             
-            <!-- ပုံမှန် ဆက်သွယ်ရန် ခလုတ် ၃ ခု -->
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-2.5">
                 <a href="tel:09978730790" class="flex items-center justify-center gap-2 bg-amber-50 hover:bg-amber-100 text-amber-800 p-2 rounded-xl border border-amber-200 transition font-bold text-xs">
                     <span>09978730790</span>
                 </a>
@@ -103,45 +106,31 @@
                     <span>Telegram Chat</span>
                 </a>
             </div>
-
-            <!-- အော်ဒါအခြေအနေစစ်ဆေးရန် သီးသန့်ပေါ်လွင်သော ခလုတ်အကြီး -->
-            <div>
-                <a href="https://t.me/phyodeliordertracking_bot" target="_blank" class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-black py-3 px-4 rounded-xl shadow-md border border-amber-400 transition-all text-sm sm:text-base">
-                    <span>🔍</span>
-                    <span>အော်ဒါနှင့်ဆုကြေး စစ်ဆေးရန်</span>
-                    <span>🏆</span>
-                </a>
-            </div>
         </div>
 
         <!-- Main Menu Tabs (ပင်မမီနူး) -->
-<div class="max-w-2xl mx-auto my-4">
-    <!-- ခေါင်းစဉ်ကြီး -->
-    <h2 class="text-xl font-extrabold text-amber-900 mb-3 text-center sm:text-left">
-        ပင်မမီနူး
-    </h2>
-
-    <!-- မီနူး ဘား -->
-    <div class="bg-amber-100/60 p-2 rounded-2xl border border-amber-200 shadow-sm">
-        <div class="flex sm:grid sm:grid-cols-5 gap-1.5 overflow-x-auto pb-1 scrollbar-none">
-            <button id="tabFood" onclick="switchServiceMode('food')" class="whitespace-nowrap flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl font-bold text-xs bg-amber-500 text-white shadow transition-all shrink-0">
-                <span>စားသောက်ဆိုင်</span>
-            </button>
-            <button id="tabShopping" onclick="switchServiceMode('shopping')" class="whitespace-nowrap flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl font-bold text-xs bg-white text-gray-800 hover:bg-amber-50 transition-all border border-amber-200 shrink-0">
-                <span>ဈေး/ကုန်စုံ</span>
-            </button>
-            <button id="tabParcel" onclick="switchServiceMode('parcel')" class="whitespace-nowrap flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl font-bold text-xs bg-white text-gray-800 hover:bg-amber-50 transition-all border border-amber-200 shrink-0">
-                <span>ပစ္စည်းပို့</span>
-            </button>
-            <button id="tabRental" onclick="switchServiceMode('rental')" class="whitespace-nowrap flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl font-bold text-xs bg-white text-gray-800 hover:bg-amber-50 transition-all border border-amber-200 shrink-0">
-                <span>ယာဉ်ငှားမည်</span>
-            </button>
-            <button id="tabPartner" onclick="switchServiceMode('partner')" class="whitespace-nowrap flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl font-bold text-xs bg-white text-gray-800 hover:bg-amber-50 transition-all border border-amber-200 shrink-0">
-                <span>မိတ်ဖက်ဆိုင်</span>
-            </button>
+        <div class="max-w-2xl mx-auto bg-amber-100/60 p-2 rounded-2xl border border-amber-200 shadow-sm">
+            <div class="grid grid-cols-2 sm:grid-cols-5 gap-1.5">
+                <button id="tabFood" onclick="switchServiceMode('food')" class="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl font-bold text-xs bg-amber-500 text-white shadow transition-all">
+                     <span>စားသောက်ဆိုင်</span>
+                </button>
+                <button id="tabShopping" onclick="switchServiceMode('shopping')" class="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl font-bold text-xs bg-white text-gray-800 hover:bg-amber-50 transition-all border border-amber-200">
+                     <span>ဈေး/ကုန်စုံ</span>
+                </button>
+                <button id="tabParcel" onclick="switchServiceMode('parcel')" class="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl font-bold text-xs bg-white text-gray-800 hover:bg-amber-50 transition-all border border-amber-200">
+                     <span>ပစ္စည်းပို့</span>
+                </button>
+                <button id="tabRental" onclick="switchServiceMode('rental')" class="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl font-bold text-xs bg-white text-gray-800 hover:bg-amber-50 transition-all border border-amber-200">
+                     <span>ယာဉ်ငှားမည်</span>
+                </button>
+                <button id="tabPartner" onclick="switchServiceMode('partner')" class="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl font-bold text-xs bg-white text-gray-800 hover:bg-amber-50 transition-all border border-amber-200">
+                     <span>မိတ်ဖက်ဆိုင်</span>
+                </button>
+            </div>
         </div>
+
     </div>
-</div>
+
 
         <!-- 1. FOOD SECTION -->
         <section id="foodSection" class="bg-white p-4 rounded-2xl shadow-sm border border-amber-100 space-y-4">
@@ -2715,6 +2704,13 @@ let previousPartnerStore = 'partner1';
         };
     </script>
 
+</pre>
+    <p><br></p>
+    <p><br></p>
+    <p><br></p>
+    <p><br></p>
+    <p><br></p>
+    <p><br></p>
 </body>
 
 </html>
